@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finanzas</title>
+    <link rel="stylesheet" href="./estilo/estilo.css">
+    <link rel="stylesheet" href="./estilo/navegador.css">
+</head>
+<body>
+    
+    <nav class="navegador">
+
+        <div class="blue">
+            <ul>
+                <li>Compra: <text id="BCompra"></text></li>
+                <li>Venta: <text id="BVenta"></text></li>
+            </ul>    
+        </div>
+
+        <div class="oficial">
+            <ul>
+                <li>Compra: <text id="OCompra"></text></li>
+                <li>Venta: <text id="OVenta"></text></li>
+            </ul>    
+        </div>
+
+        <div class="actualizado">
+
+            <ul>
+                <li>Actualizado: <text id="hora"></text></li>
+            </ul>
+
+        </div>
+        
+        
+    </nav>
+    <div class="contenedor">
+
+        
+
+    <form>
+        <h4>Nuevos Ahorros</h4>
+                <div class="container">
+                    <div>
+                        <text>Cantidad</text> 
+                        <text>Fecha</text> 
+                        <text>Vendedor</text> 
+                        <text>Cotización</text> 
+                        <text>Pesos usados</text>
+                        <text>Prestamos</text> 
+                    </div>
+    
+                    <div>
+                        <input id="Cantidad" onkeyup="calcular()" type="number"></input>
+                        <div class="inputHoy"><input id="Fecha" placeholder="yyyy/mm/dd"></input> <button class="hoy" onclick="hoy()" type="button">Hoy</button></div>
+                        <input id="Vendedor"></input>
+                        <div class="inputHoy"><input id="Precio" onkeyup="calcular()" type="number"></input><button class="hoy" onclick="blue()" type="button">Blue</button></div>
+                        <input id="PesosUsados" type="number"></input>
+                        <div class="inputHoy"><input id="Prestamo"></input> <button class="hoy" onclick="no()" type="button">No!</button></div>
+                    </div>
+    
+                </div>
+                <div class="botones">
+                    <button id="btnLimpiar" type="button" onclick="Limpiar()">Limpiar</button>
+                    <button id="btnAgregar" type="button" onclick="agregar()">Agregar</button>
+                    <button id="btnGuardar" type="button" disabled="false">Guardar</button>
+                </div>
+    </form>
+    
+    
+
+    <table>
+        <h4>Ahorros</h4>
+        <thead>
+            <tr>
+                <td>Fila</td>
+                <td>Cantidad</td>
+                <td>Fecha</td>
+                <td>Vendedor</td>
+                <td>Cotización</td>
+                <td>Pesos usados</td>
+                <td>Prestamo</td>
+                <td>Accionar</td>
+            </tr>
+        </thead>
+
+        <tbody id="cuerpoTabla">
+        
+        <tbody>
+    </table>
+
+    <hr>
+
+    <table>
+        <thead>
+            <tr>
+                <td>Ahorro</td>
+                <td>Objetivo</td>
+                <td>Falta</td>
+            </tr>
+        </thead>
+        <tbody id="resumen">
+
+        </tbody>
+    </table>
+
+
+    </div>
+
+
+    <div class="administrar">
+        <ul>
+            <li>
+                <span><ion-icon name="refresh-circle-outline"></ion-icon></span>
+            </li>
+            <li>
+                <span><ion-icon name="eye-outline"></ion-icon></span>
+                <!--<ion-icon name="eye-off-outline"></ion-icon>-->
+            </li>
+
+            <li>
+                <span><ion-icon name="person-circle-outline"></ion-icon></span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="fondo" onclick="Limpiar()">
+    </div>
+
+
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+<script src="./logica/variables.js"></script>
+<script src="./logica/general.js"></script>
+<script src="./logica/logica.js"></script>
+<script src="./logica/agrregar.js"></script>
+<script src="./logica/btnAuxiliares.js"></script>
+<script src="./logica/resumen.js"></script>
+<script src="./logica/loadTable.js"></script>
+
+
+<script>
+
+    loadTable();//ejecutamos la renderización de la tabla
+
+
+</script>
+</html>

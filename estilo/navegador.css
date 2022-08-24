@@ -1,0 +1,55 @@
+.navegador
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: orange;
+    position: sticky;
+    width: 100%;
+    margin: 0;
+    left: 0;
+    top:0;
+    margin-bottom: 2rem;
+}
+
+.navegador
+ div
+ {
+    margin-right: 2rem;
+ }
+
+                    .navegador
+                    .blue
+                    {
+                        background: rgba(60, 74, 202, 0.5);
+                    }
+
+                    .navegador
+                    .oficial
+                    {
+                        background: rgba(80, 243, 39, 0.5);
+                    }
+
+                    .navegador
+                    .actualizado
+                    {
+                        background: rgba(142, 57, 168, 0.5);
+                    }
+
+.navegador
+ div
+ ul
+ {
+    display: flex;
+    flex-direction: row;
+ }
+
+
+.navegador
+div
+ul
+li
+{
+    margin-right: 3rem;
+    list-style: none;
+}
